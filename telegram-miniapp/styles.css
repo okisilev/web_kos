@@ -486,6 +486,43 @@ section h2 {
     animation: fadeIn 0.6s ease;
 }
 
+/* Категории решений */
+.solution-card[data-category="website"] .solution-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.solution-card[data-category="website"] .solution-category {
+    background: rgba(255, 255, 255, 0.9);
+    color: #667eea;
+}
+
+.solution-card[data-category="bot"] .solution-image {
+    background: linear-gradient(135deg, #0088cc 0%, #0077b3 100%);
+}
+
+.solution-card[data-category="bot"] .solution-category {
+    background: rgba(255, 255, 255, 0.9);
+    color: #0088cc;
+}
+
+.solution-card[data-category="crypto"] .solution-image {
+    background: linear-gradient(135deg, #f7931a 0%, #ff9500 100%);
+}
+
+.solution-card[data-category="crypto"] .solution-category {
+    background: rgba(255, 255, 255, 0.9);
+    color: #f7931a;
+}
+
+.solution-card[data-category="vpn"] .solution-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.solution-card[data-category="vpn"] .solution-category {
+    background: rgba(255, 255, 255, 0.9);
+    color: #667eea;
+}
+
 /* Скроллбар */
 .solutions-slider::-webkit-scrollbar {
     height: 4px;

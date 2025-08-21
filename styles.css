@@ -533,6 +533,12 @@ section {
         rgba(217, 119, 6, 0.9) 100%);
 }
 
+.solution-card[data-category="vpn"] .solution-overlay {
+    background: linear-gradient(135deg, 
+        rgba(102, 126, 234, 0.9) 0%, 
+        rgba(118, 75, 162, 0.9) 100%);
+}
+
 /* Дополнительные эффекты для фона */
 .solution-overlay::before {
     content: '';
@@ -571,6 +577,10 @@ section {
     animation: automation-flow 2s ease infinite;
 }
 
+.solution-card[data-category="vpn"]:hover .solution-overlay {
+    animation: vpn-shield 2s ease infinite;
+}
+
 @keyframes website-glow {
     0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.5); }
     50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.8); }
@@ -585,6 +595,17 @@ section {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+@keyframes vpn-shield {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+        transform: scale(1.02);
+    }
+    50% { 
+        box-shadow: 0 0 40px rgba(102, 126, 234, 0.8);
+        transform: scale(1.03);
+    }
 }
 
 .solution-links {
