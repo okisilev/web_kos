@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Solutions - Telegram Mini App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <!-- Главный контейнер -->
+    <div class="app-container">
+        <!-- Заголовок -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>IT Solutions</span>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-contact" onclick="contactUs()">
+                        <i class="fas fa-phone"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Главная секция -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>IT решения для вашего бизнеса</h1>
+                <p>Создание сайтов, ботов, автоматизация и обслуживание</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Проектов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Довольных клиентов</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Услуги -->
+        <section class="services-section">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card" onclick="showService('website')">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Создание сайтов</h3>
+                    <p>Современные веб-сайты с адаптивным дизайном</p>
+                </div>
+
+                <div class="service-card" onclick="showService('bot')">
+                    <div class="service-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram боты</h3>
+                    <p>Умные боты для автоматизации бизнеса</p>
+                </div>
+
+                <div class="service-card" onclick="showService('automation')">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Автоматизация</h3>
+                    <p>Скрипты и API интеграции</p>
+                </div>
+
+                <div class="service-card" onclick="showService('servers')">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Обслуживание серверов</h3>
+                    <p>Мониторинг и поддержка</p>
+                </div>
+
+                <div class="service-card" onclick="showService('office')">
+                    <div class="service-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3>Обслуживание орг.техники</h3>
+                    <p>Принтеры, МФУ, заправка</p>
+                </div>
+
+                <div class="service-card" onclick="showService('crypto')">
+                    <div class="service-icon">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <h3>Crypto услуги</h3>
+                    <p>USDT, майнинг, консультации</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Готовые решения -->
+        <section class="solutions-section">
+            <h2>Готовые решения</h2>
+            <div class="solutions-slider">
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <div class="solution-category">Веб-сайт</div>
+                    </div>
+                    <div class="solution-content">
+                        <h3>Корпоративный сайт</h3>
+                        <p>Современный сайт с CMS и CRM интеграцией</p>
+                        <div class="solution-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <div class="solution-category">Telegram бот</div>
+                    </div>
+                    <div class="solution-content">
+                        <h3>Бот для доставки</h3>
+                        <p>Умный бот с платежами и геолокацией</p>
+                        <div class="solution-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Telegram API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <div class="solution-category">Crypto</div>
+                    </div>
+                    <div class="solution-content">
+                        <h3>Платформа обмена USDT</h3>
+                        <p>Безопасная платформа для покупки/продажи</p>
+                        <div class="solution-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Blockchain API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section class="contact-section">
+            <h2>Свяжитесь с нами</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-telegram"></i>
+                    <span>@itsolutions_support</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (914) 942-51-15</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@itsolutions.ru</span>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="startProject()">
+                Начать проект
+            </button>
+        </section>
+
+        <!-- Футер -->
+        <footer class="app-footer">
+            <p>&copy; 2025 IT Solutions. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <!-- Модальные окна -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Услуга</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="modalDescription"></div>
+                <div class="modal-features">
+                    <h4>Что включено:</h4>
+                    <ul id="modalFeatures"></ul>
+                </div>
+                <div class="modal-price">
+                    <h4>Стоимость:</h4>
+                    <p id="modalPrice"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal()">Закрыть</button>
+                <button class="btn-primary" onclick="orderService()">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
